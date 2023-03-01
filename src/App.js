@@ -1,7 +1,17 @@
+import React from "react";
+
 import "./App.css";
+import { Header } from "./components/Header/Header";
+import { LocationContextProvider } from "./contexts/LocationContext";
 
 function App() {
-  return <div className="App">Zomato Clone</div>;
+  return (
+    <LocationContextProvider>
+      <div className="App">
+        <Header />
+      </div>
+    </LocationContextProvider>
+  );
 }
 
 export default App;
