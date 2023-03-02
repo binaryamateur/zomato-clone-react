@@ -7,4 +7,13 @@ const locationList = [
   ["Eastern Reef", "Sydney", "Australia"],
 ];
 
-export { logoUrl, locationList };
+const filters = [
+  "Filters",
+  "Delivery Time",
+  "Rating: 4.0+",
+  "Pure Veg",
+  "Cuisines",
+  "More Filters",
+];
+
+export { logoUrl, locationList, filters };
