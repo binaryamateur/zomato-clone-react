@@ -2,8 +2,10 @@
 import React from "react";
 import styles from "./Carousal.module.css";
 import { PICTURES } from "../../constants";
+import { useFilter } from "../../hooks/useFilter";
 
 function Carousal() {
+  const [, setFilter] = useFilter();
   const leftArrowRef = React.useRef(null);
   const rightArrowRef = React.useRef(null);
   const currentItemRef = React.useRef(null);
@@ -64,6 +66,7 @@ function Carousal() {
         {PICTURES.map((item, index) => {
           return (
             <nav
+              onClick={() => setFilter(index < 3 ? index : -1)}
               key={index}
               id={`food${index}`}
               className={`${styles["food-item"]} food-item`}
