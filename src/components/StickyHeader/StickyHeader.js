@@ -2,7 +2,6 @@ import styles from "./StickyHeader.module.css";
 import { filters } from "../../constants";
 
 function StickyHeader() {
-  console.log(styles);
   return (
     <nav className={styles["sticky-header"]}>
       <ul
